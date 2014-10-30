@@ -1,19 +1,209 @@
 /*
-  ================================================
-  Handcrafted by Markus Danek <markus@creativebrains.net>
-  Last updated on 14.10.2014
-  appoint.io Stylesheet
-  ================================================
-  Contents:
+    ================================================
+    Handcrafted by Markus Danek <markus@creativebrains.net>
+    Last updated on 30.10.2014
+    appoint.io Stylesheet
+    ================================================
+    Contents:
     01    Basic
-  ================================================
-  */
+    02    Header
+        a    Navigation
+        b    Responsive Navigation Overlay
+    ================================================
+    */
 
 
-  /* ----------------------------------------------------------------------------------------------------------
-  01 Basic ----------------------------------------------------------------------------------------------------
-  ---------------------------------------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------------------------------
+    01 Basic ----------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
+
+html, 
+body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 body {
+    background: #232932; #f7f5f3;
+    font-family: "museo-sans", "sans-serif";
+}
 
+button.ghost {
+    background: transparent;
+    padding: 8px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+button.ghost.white {
+    color: #FFF;
+    border: 1px solid #FFFFFF;
+}
+
+    /* ----------------------------------------------------------------------------------------------------------
+    02 Header ----------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
+
+header {
+    background: #232932;
+}
+
+header h1.logo {
+    text-indent: -9999px;
+}    
+
+    /* 02a - Navigation */
+
+header nav {
+
+}
+
+header nav ul.desktop {
+
+}
+
+header nav ul.desktop li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul.desktop li a {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    padding: 0 0 6px;
+    font-family: "museo-sans", "sans-serif";
+}
+
+header nav ul.desktop li a:hover {
+    border-bottom: 1px solid #fdfdfd;
+}
+
+@media (max-width: 768px) { 
+    header nav ul.desktop {
+        display: none;
+    }
+}
+
+
+    /* 02b - Responsive Navigation Overlay */
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(35,41,50,0.9);
+}
+
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    font-size: 54px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 5);
+    min-height: 54px;
+}
+
+.overlay ul li a {
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #e3fcb1;
+}
+
+.overlay-appoint {
+    opacity: 0;
+visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-appoint.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.overlay-appoint nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.overlay-appoint nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-appoint.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.overlay-appoint.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
 }
