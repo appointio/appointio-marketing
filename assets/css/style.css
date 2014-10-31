@@ -263,11 +263,12 @@ section.home-short-features.container .feature {
 }
 
 section.home-short-features.container .feature i {
-
+    color: #232932;
 }
 
 section.home-short-features.container .feature h3 {
-
+    font-size: 1.4em;
+    line-height: 1.4em;
 }
 
 section.home-short-features.container .feature p {
