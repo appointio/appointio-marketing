@@ -1,0 +1,22 @@
+{
+  "name": "appoint_marketing",
+  "version": "0.1.0",
+  "authors": [
+    "Dominik Kukacka <dominik.kukacka@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/bower_components",
+    "assets/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "~4.2.0",
+    "modernizer": "~2.8.2",
+    "bootstrap": "~3.3.0",
+    "classie": "~1.0.1"
+  }
+}
