@@ -1,20 +1,26 @@
 'use strict'
 
+var path = require('path');
+
 module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
+        app: {
+            app: 'app'
+        },
         express: {
-            server: {
-              options: {
-                port: 8888,
-                bases: ['.'],
-                livereload: true
-              }
+            dev: {
+                options: {
+                    port: 9000,
+                    hostname: '0.0.0.0',
+                    bases: ['<%= app.app %>'],
+                    livereload: true
+                }
             }
           }
 
     });
-
-    grunt.loadNpmTasks('grunt-express');
 
     grunt.registerTask('default', ['express', 'express-keepalive']);
 };
