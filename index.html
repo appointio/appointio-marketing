@@ -1,54 +1,85 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="Markus Danek">
-        <title>appoint.io - Der einfache Weg, Ihre Termine online zu verwalten</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Markus Danek">
+    <title>appoint.io - Der einfache Weg, Ihre Termine online zu verwalten</title>
 
-        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-        <script src="//use.typekit.net/jqk5agy.js"></script>
-        <script>try{Typekit.load();}catch(e){}</script>
-        <link href="assets/css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1 class="logo">appoint.io</h1>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://use.typekit.net/jqk5agy.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">appoint.io</h1>
+            <nav>
+                <ul class="desktop">
+                    <li><a href="#">Startseite</a></li>
+                    <li><a href="#">Funktionen</a></li>
+                    <li><a href="#">Preis</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <!-- <button class="ghost white pull-right">Demo beantragen</button> -->
+                </ul><!-- END ul.desktop -->
+            </nav><!-- END nav -->
+            <a href="#" id="trigger-overlay" class="pull-right visible-xs"><i style="color: white" class="fa fa-bars fa-2x"></i></a>
+            <div class="overlay overlay-appoint visible-xs">
+                <button type="button" class="overlay-close">Close</button>
                 <nav>
-                    <ul class="desktop">
+                    <ul>
                         <li><a href="#">Startseite</a></li>
                         <li><a href="#">Funktionen</a></li>
                         <li><a href="#">Preis</a></li>
                         <li><a href="#">Über uns</a></li>
                         <li><a href="#">Kontakt</a></li>
-                        <!-- <button class="ghost white pull-right">Demo beantragen</button> -->
-                    </ul><!-- END ul.desktop -->
+                    </ul><!-- END ul -->
                 </nav><!-- END nav -->
-                <a href="#" id="trigger-overlay" class="pull-right visible-xs"><i style="color: white" class="fa fa-bars fa-2x"></i></a>
-                <div class="overlay overlay-appoint visible-xs">
-                    <button type="button" class="overlay-close">Close</button>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Startseite</a></li>
-                            <li><a href="#">Funktionen</a></li>
-                            <li><a href="#">Preis</a></li>
-                            <li><a href="#">Über uns</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                        </ul>
-                    </nav>
-                </div><!--END overlay overlay-appoint visible-xs -->
-            </div><!-- END .container -->
-        </header><!-- END header -->
+            </div><!--END overlay overlay-appoint visible-xs -->
+        </div><!-- END .container -->
+    </header><!-- END header -->
+    <section class="hero-home">
+        <div class="content container">
+            <h1>Online scheduling that puts you ahead of schedule</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br/>
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div><!-- END .content -->
+    </section><!-- END section.hero.home -->
+    <section class="home-short-features container">
+        <div class="row">
+            <div class="feature col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                <i class="fa fa-line-chart fa-3x"></i>
+                <h3>Increase your efficiency</h3>
+                <p>By letting appoint.io take care of your appointments you are able to focus on that you do best.</p>
+            </div><!-- END .feature -->
+            <div class="feature col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                <i class="fa fa-calendar fa-3x"></i>
+                <h3>Your built-in receptionist</h3>
+                <p>Accept appointments on your own website on our website. Customers are able to book at anytime from any device they have.</p>
+            </div><!-- END .feature -->
+            <div class="feature col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                <i class="fa fa-eye fa-3x"></i>
+                <h3>Reduce no-shows</h3>
+                <p>Automatic reminders and calendar entries ensure customers remember their appointments.</p>
+            </div><!-- END .feature -->
+            <div class="feature col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                <i class="fa fa-lock fa-3x"></i>
+                <h3>Safe</h3>
+                <p>Your customer data is encrypted and stored safely. We also make sure your privacy is never in danger and complies with EU law.</p>
+            </div><!-- END .feature -->
+        </div><!-- END .row -->
+    </section><!-- END section.home-short-features -->
 
-        <!-- Javascripts -->
-        <script src="assets/js/modernizr.custom.js"></script>
-        <script src="assets/js/classie.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+    <!-- Javascripts -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 </html>

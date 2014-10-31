@@ -2,7 +2,7 @@
     ================================================
     Handcrafted by Markus Danek <markus@creativebrains.net>
     Last updated on 30.10.2014
-    appoint.io Stylesheet
+    appoint.io Marketing Page Stylesheet
     ================================================
     Contents:
     01    Basic
@@ -11,7 +11,6 @@
         b    Responsive Navigation Overlay
     ================================================
     */
-
 
     /* ----------------------------------------------------------------------------------------------------------
     01 Basic ----------------------------------------------------------------------------------------------------
@@ -25,7 +24,7 @@ body {
 }
 
 body {
-    background: #232932; #f7f5f3;
+    background: #f7f5f3;
     font-family: "museo-sans", "sans-serif";
 }
 
@@ -50,10 +49,12 @@ button.ghost.white {
 
 header {
     background: #232932;
+    min-height: 85px;
 }
 
 header h1.logo {
     text-indent: -9999px;
+    font-size: 8px;
 }    
 
     /* 02a - Navigation */
@@ -81,7 +82,8 @@ header nav ul.desktop li a {
     border-bottom: 1px solid transparent;
     text-decoration: none;
     padding: 0 0 6px;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 300;
 }
 
 header nav ul.desktop li a:hover {
@@ -92,8 +94,11 @@ header nav ul.desktop li a:hover {
     header nav ul.desktop {
         display: none;
     }
-}
 
+    #trigger-overlay {
+        margin-right: 20px;
+    }
+}
 
     /* 02b - Responsive Navigation Overlay */
 
@@ -103,7 +108,7 @@ header nav ul.desktop li a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(35,41,50,0.9);
+    background: rgba(35,41,50,1);
 }
 
 .overlay .overlay-close {
@@ -151,59 +156,214 @@ header nav ul.desktop li a:hover {
     font-weight: 300;
     display: block;
     color: #fff;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    padding: 0 0 6px;
+    font-family: "proxima-nova", "sans-serif";
 }
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-    color: #e3fcb1;
+    color: #fdfdfd;
+    border-bottom: 1px solid #fdfdfd;
 }
 
 .overlay-appoint {
     opacity: 0;
-visibility: hidden;
-  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-  transition: opacity 0.5s, visibility 0s 0.5s;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
 .overlay-appoint.open {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
 
 .overlay-appoint nav {
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
 }
 
 .overlay-appoint nav ul {
-  opacity: 0.4;
-  -webkit-transform: translateY(-25%) rotateX(35deg);
-  transform: translateY(-25%) rotateX(35deg);
-  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.4;
+    -webkit-transform: translateY(-25%) rotateX(35deg);
+    transform: translateY(-25%) rotateX(35deg);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .overlay-appoint.open nav ul {
-  opacity: 1;
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 
 .overlay-appoint.close nav ul {
-  -webkit-transform: translateY(25%) rotateX(-35deg);
-  transform: translateY(25%) rotateX(-35deg);
+    -webkit-transform: translateY(25%) rotateX(-35deg);
+    transform: translateY(25%) rotateX(-35deg);
 }
 
 @media screen and (max-height: 30.5em) {
-  .overlay nav {
-    height: 70%;
-    font-size: 34px;
-  }
-  .overlay ul li {
-    min-height: 34px;
-  }
+    .overlay nav {
+        height: 70%;
+        font-size: 34px;
+    }
+    .overlay ul li {
+        min-height: 34px;
+    }
 }
+
+    /* ----------------------------------------------------------------------------------------------------------
+    03 Home Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
+
+    /* 03a - Header Content */
+
+section.hero-home {
+    min-height: 650px;
+    background: url(../img/header-images/home-hero-85-compressor.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section.hero-home .content.container h1 {
+    color: #FDFDFD;
+    margin-top: 220px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
+
+section.hero-home .content.container p {
+    color: #FDFDFD;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: "museo-sans", "sans-serif";
+}
+
+    /* 03b - Short Feature List */
+
+section.home-short-features.container {
+    margin-top: 50px;
+}
+
+section.home-short-features.container .feature {
+    text-align: center;
+}
+
+section.home-short-features.container .feature i {
+
+}
+
+section.home-short-features.container .feature h3 {
+
+}
+
+section.home-short-features.container .feature p {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
