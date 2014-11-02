@@ -39,3 +39,10 @@
 	triggerBttn.addEventListener( 'click', toggleOverlay );
 	closeBttn.addEventListener( 'click', toggleOverlay );
 })();
+
+// Animation
+$(document).ready(function() {
+	$('section.hero-home .content.container h1').addClass('animated fadeInDown');
+	$('section.hero-home .content.container p').addClass('animated fadeInDown');
+	$('section.hero-home .content.container .subscribe').addClass('animated fadeIn');
+});

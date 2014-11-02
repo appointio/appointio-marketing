@@ -1,7 +1,7 @@
 /*
     ================================================
     Handcrafted by Markus Danek <markus@creativebrains.net>
-    Last updated on 30.10.2014
+    Last updated on 02.11.2014
     appoint.io Marketing Page Stylesheet
     ================================================
     Contents:
@@ -64,7 +64,7 @@ header nav {
 }
 
 header nav ul.desktop {
-
+    float: right;
 }
 
 header nav ul.desktop li {
@@ -131,7 +131,7 @@ header nav ul.desktop li a:hover {
     position: relative;
     top: 50%;
     height: 60%;
-    font-size: 54px;
+    font-size: 35px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -156,11 +156,12 @@ header nav ul.desktop li a:hover {
     font-weight: 300;
     display: block;
     color: #fff;
+    text-decoration: none;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
     border-bottom: 1px solid transparent;
-    text-decoration: none;
+    text-d3ecoration: none;
     padding: 0 0 6px;
     font-family: "proxima-nova", "sans-serif";
 }
@@ -226,12 +227,13 @@ header nav ul.desktop li a:hover {
     /* 03a - Header Content */
 
 section.hero-home {
-    min-height: 650px;
+    height: 100vh;
     background: url(../img/header-images/home-hero-85-compressor.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: -999;
 }
 
 section.hero-home .content.container h1 {
@@ -250,38 +252,133 @@ section.hero-home .content.container p {
     font-size: 24px;
     line-height: 40px;
     font-family: "museo-sans", "sans-serif";
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-duration: 2s;
+    -moz-animation-delay: 1s;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+section.hero-home .content.container .subscribe {
+    margin-top: 150px;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 3s;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+section.hero-home .content.container .subscribe form input {
+    background: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    font-family: "proxima-nova", "sans-serif";
+}
+
+section.hero-home .content.container .subscribe form input::-webkit-input-placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+section.hero-home .content.container .subscribe form input::-moz-input-placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+ 
+section.hero-home .content.container .subscribe form input:-moz-input-placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+section.hero-home .content.container .subscribe form input:-ms-input-placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+section.hero-home .content.container .subscribe form span button  {
+    background: #FFF;
+    height: 50px;
+    color: #232932;
 }
 
     /* 03b - Short Feature List */
 
-section.home-short-features.container {
-    margin-top: 50px;
+section.home-short-features {
+    padding: 50px 0;
+    background: #FFF;
 }
 
-section.home-short-features.container .feature {
+section.home-short-features .feature {
     text-align: center;
 }
 
-section.home-short-features.container .feature i {
+section.home-short-features .feature i {
     color: #232932;
 }
 
-section.home-short-features.container .feature h3 {
+section.home-short-features .feature h3 {
     font-size: 1.4em;
+    font-weight: bold;
     line-height: 1.4em;
 }
 
-section.home-short-features.container .feature p {
+section.home-short-features .feature p {
 
 }
 
+    /* 03c - Feature Section User */
 
+section.feature-user {
+    background: #F7F7F7;
+    height: 500px;
+    padding: 50px 0;
+}
 
+section.feature-user .text {
+}
 
+section.feature-user .text h4 {
+    color: #242a33;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 50px;
+}
 
+section.feature-user .text ul li {
+    list-style-type: none;
+    margin-bottom: 40px;
+    color: #73838E;
+    font-size: 15px;
+    line-height: 25px;
+}
 
+.step {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: 2px solid #73838e;
+    border-radius: 100%;
+    color: #73838e;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+}
 
+.step:before {
+    counter-increment: step;
+    content: counters(step,'');
+}
 
+section.feature-user .text ul li p {
+    margin: 0 0 0 60px;
+}
 
 
 
