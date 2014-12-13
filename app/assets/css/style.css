@@ -1,7 +1,7 @@
 /*
     ================================================
     Handcrafted by Markus Danek <markus@creativebrains.net>
-    Last updated on 02.11.2014
+    Last updated on 13.12.2014
     appoint.io Marketing Page Stylesheet
     ================================================
     Contents:
@@ -84,6 +84,10 @@ header nav ul.desktop li {
     list-style-type: none;
     display: inline-block;
     margin: 0 20px;
+}
+
+header nav ul.desktop li.active {
+    border-bottom: 1px solid #fdfdfd;
 }
 
 header nav ul.desktop li a {
@@ -430,7 +434,6 @@ section.feature-user .image img {
     ---------------------------------------------------------------------------------------------------------- */
 
 footer {
-    margin-top: 50px;
     background: #232932;
     height: 200px;
     color: #FFFFFF;
@@ -510,44 +513,319 @@ footer .social ul li a:hover {
     }
 }
 
+    /* ----------------------------------------------------------------------------------------------------------
+    04 Price Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
 
+section.hero-price {
+    height: 40vh;
+    background: url(../img/header-images/home-hero-85-compressor.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+section.hero-price .content.container h1 {
+    color: #FDFDFD;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
 
+section.price-table {
+    position: relative;
+    z-index: -999;
+}
 
+section.price-table h1 {
+    max-width: 500px;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+}
 
+section.price-table .table {
+    margin: 50px auto 0 auto;
+    background: #59687E;
+    height: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #FFF;
+    border-radius: 5px;
+}
 
+section.price-table .table ul {
+    background: #59687E;
+}
 
+section.price-table .table ul li {
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+    list-style-type: none;
+}
 
+section.price-table .table ul li.euro {
+    text-align: center;
+    font-size: 48px;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 10px;
+}
 
+section.price-table .table ul li.month {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
+section.price-table .table ul li.employee {
+    text-align: center;
+    font-size: 28px;
+}
 
+section.price-detail {
+    background: #FFF;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
 
+section.price-detail h1 {
+    text-align: center;
+    font-size: 30px;
+}
 
+section.price-detail table {
+    width: 100%;
+}
 
+section.price-detail table tbody tr {
+    border-bottom: 1px solid #E0E0E0;
+    line-height: 50px;
+}
 
+section.price-detail table tbody tr td.align {
+    text-align: right;
+}
 
+    /* ----------------------------------------------------------------------------------------------------------
+    04 Team Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
 
+section.hero-team {
+    height: 40vh;
+    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+section.hero-team .content.container h1 {
+    color: #FDFDFD;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
 
+section.team-info {
+    background: #FFF;
+    padding-bottom: 50px;
+    z-index: -999;
+    position: relative;
+}
 
+section.team-info h1 {
+    max-width: 700px;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+}
 
+section.team-info .team-img {
+    margin: 80px auto 0 auto;
+}
 
+section.team-info .team-img ul {
+    text-align: center;
+}
 
+section.team-info .team-img ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
 
+section.team-info .team-img ul li p {
+    text-align: center;
+    color: #5d6569;
+    margin: 8px 0;
+}
 
+section.team-info .team-img ul li span {
+    display: block;
+    text-align: center;
+    color: #95a0a5;
+}
 
+section.team-info .team-img ul li img{
+    width: 150px;
+    height: 150px;
+}
 
+    /* ----------------------------------------------------------------------------------------------------------
+    04 Contact Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
 
+section.hero-contact {
+    height: 40vh;
+    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+section.hero-contact .content.container h1 {
+    color: #FDFDFD;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
 
+section.contact {
+    padding-bottom: 50px;
+    z-index: -999;
+    position: relative;
+}
 
+section.contact h1 {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+}
 
+section.contact h3 {
+    font-weight: 300;
+}
 
+section.contact p {
+    font-size: 16px;
+    line-height: 26px;
+}
 
+    /* ----------------------------------------------------------------------------------------------------------
+    04 Contact Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
 
+section.hero-tos {
+    height: 40vh;
+    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+section.hero-tos .content.container h1 {
+    color: #FDFDFD;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
 
+section.tos {
+    padding-bottom: 50px;
+    z-index: -999;
+    position: relative;
+}
 
+section.tos h1 {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+}
+
+section.tos h3 {
+    font-weight: 300;
+}
+
+section.tos p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+    /* ----------------------------------------------------------------------------------------------------------
+    04 Contact Page ------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------- */
+
+section.hero-privacy {
+    height: 40vh;
+    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section.hero-privacy .content.container h1 {
+    color: #FDFDFD;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: "museo-sans", "sans-serif";
+}
+
+section.privacy {
+    padding-bottom: 50px;
+    z-index: -999;
+    position: relative;
+}
+
+section.privacy h1 {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
+    font-weight: 100;
+}
+
+section.privacy h3 {
+    font-weight: 300;
+}
+
+section.privacy p {
+    font-size: 16px;
+    line-height: 26px;
+}
 
 
 
