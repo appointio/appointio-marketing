@@ -1,7 +1,9 @@
 {
-  "name": "appoint_marketing",
+  "name": "appointio-marketing",
   "version": "0.1.1",
   "authors": [
+    "Markus Danek <markus.danek@gmail.com>",
+    "Clemens Ehrenreich <clemensehrenreich@gmail.com>",
     "Dominik Kukacka <dominik.kukacka@gmail.com>"
   ],
   "license": "MIT",

@@ -234,6 +234,7 @@ section.hero-home {
     -o-background-size: cover;
     background-size: cover;
     z-index: -999;
+    position: relative;
 }
 
 section.hero-home .content.container h1 {
@@ -311,6 +312,8 @@ section.hero-home .content.container .subscribe form span button  {
 section.home-short-features {
     padding: 50px 0;
     background: #FFF;
+    position: relative;
+    z-index: -999;
 }
 
 section.home-short-features .feature {
@@ -337,6 +340,8 @@ section.feature-user {
     background: #F7F7F7;
     height: 500px;
     padding: 50px 0;
+    position: relative;
+    z-index: -999;
 }
 
 section.feature-user .text {

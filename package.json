@@ -1,5 +1,5 @@
 {
-  "name": "appoint_marketing",
+  "name": "appointio-marketing",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:appointio/appoint_marketing.git"
+    "url": "git@bitbucket.org:appointio/appointio-marketing.git"
   },
   "author": "",
   "license": "ISC",
