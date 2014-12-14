@@ -1,14 +1,19 @@
 /*
     ================================================
     Handcrafted by Markus Danek <markus@creativebrains.net>
-    Last updated on 13.12.2014
+    Last updated on 14.12.2014
     appoint.io Marketing Page Stylesheet
     ================================================
     Contents:
     01    Basic
     02    Header
-        a    Navigation
-        b    Responsive Navigation Overlay
+    03    Home Page
+    04    Footer
+    05    Price Page
+    06    Team Page
+    07    Contact Page
+    08    TOS Page
+    09    Privacy Page
     ================================================
     */
 
@@ -55,7 +60,7 @@ header {
 header h1.logo {
     text-indent: -9999px;
     font-size: 1px;
-    background: url("../img/appointio-logo-50.png") no-repeat;
+    background: url("../img/appointio-logo.png") no-repeat;
     width: 50px;
     height: 50px;
     margin-top: 20px !important;
@@ -246,7 +251,7 @@ header nav ul.desktop li a:hover {
 
 section.hero-home {
     height: 100vh;
-    background: url(../img/header-images/home-hero-85-compressor.png) no-repeat center center fixed;
+    background: url(../img/header-images/hero-home.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -269,22 +274,10 @@ section.hero-home .content.container p {
     font-size: 24px;
     line-height: 40px;
     font-family: "museo-sans", "sans-serif";
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay: 1s;
-    -moz-animation-duration: 2s;
-    -moz-animation-delay: 1s;
-    animation-duration: 2s;
-    animation-delay: 1s;
 }
 
 section.hero-home .content.container .subscribe {
     margin-top: 150px;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 3s;
-    -moz-animation-duration: 3s;
-    -moz-animation-delay: 3s;
-    animation-duration: 3s;
-    animation-delay: 3s;
 }
 
 section.hero-home .content.container .subscribe form input {
@@ -374,9 +367,6 @@ section.feature-user {
     z-index: -999;
 }
 
-section.feature-user .text {
-}
-
 section.feature-user .text h4 {
     color: #242a33;
     font-size: 25px;
@@ -430,7 +420,7 @@ section.feature-user .image img {
 }
 
     /* ----------------------------------------------------------------------------------------------------------
-    04 Footer ------------------------------------------------------------------------------------------------
+    04 Footer ---------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 footer {
@@ -438,7 +428,8 @@ footer {
     height: 200px;
     color: #FFFFFF;
     padding-top: 50px;
-    z-index: -999;
+    /*z-index: -999;
+    position: relative;*/
 }
 
 footer .logo {
@@ -452,7 +443,7 @@ footer .links {
 footer .links ul li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 footer .links ul li a {
@@ -482,7 +473,7 @@ footer p.rights {
 footer .social ul li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 footer .social ul li a {
@@ -497,29 +488,19 @@ footer .social ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    footer .col-xs-2,
-    footer p.rights {
-        display: none;
-    }
-    footer .links {
-        margin-left: 50px;
-    }
-    footer .links ul li,
-    footer .social ul li a {
-        margin-bottom: 10px;
-    }
-    footer {
+    footer .logo,
+    footer .social {
         display: none;
     }
 }
 
     /* ----------------------------------------------------------------------------------------------------------
-    04 Price Page ------------------------------------------------------------------------------------------------
+    05 Price Page -----------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 section.hero-price {
     height: 40vh;
-    background: url(../img/header-images/home-hero-85-compressor.png) no-repeat center center fixed;
+    background: url(../img/header-images/hero-price.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -615,12 +596,12 @@ section.price-detail table tbody tr td.align {
 }
 
     /* ----------------------------------------------------------------------------------------------------------
-    04 Team Page ------------------------------------------------------------------------------------------------
+    06 Team Page ------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 section.hero-team {
     height: 40vh;
-    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    background: url(../img/header-images/hero-team.jpg) no-repeat center bottom fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -687,12 +668,12 @@ section.team-info .team-img ul li img{
 }
 
     /* ----------------------------------------------------------------------------------------------------------
-    04 Contact Page ------------------------------------------------------------------------------------------------
+    07 Contact Page ---------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 section.hero-contact {
     height: 40vh;
-    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    background: url(../img/header-images/hero-contact.jpg) no-repeat center bottom fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -733,13 +714,22 @@ section.contact p {
     line-height: 26px;
 }
 
+section.contact section.tos p a {
+    z-index: 111;
+    display: none;
+}
+
+.tos p span {
+    font-weight: bold;
+}
+
     /* ----------------------------------------------------------------------------------------------------------
-    04 Contact Page ------------------------------------------------------------------------------------------------
+    08 TOS Page -------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 section.hero-tos {
     height: 40vh;
-    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    background: url(../img/header-images/hero-tos.jpg) no-repeat center bottom fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -780,13 +770,17 @@ section.tos p {
     line-height: 26px;
 }
 
+section.tos p a {
+    z-index: 111;
+}
+
     /* ----------------------------------------------------------------------------------------------------------
-    04 Contact Page ------------------------------------------------------------------------------------------------
+    09 Privacy Page ---------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------- */
 
 section.hero-privacy {
     height: 40vh;
-    background: url(../img/header-images/team-hero.jpg) no-repeat center bottom fixed;
+    background: url(../img/header-images/hero-privacy.jpg) no-repeat center bottom fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -826,28 +820,3 @@ section.privacy p {
     font-size: 16px;
     line-height: 26px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
