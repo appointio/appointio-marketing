@@ -401,6 +401,18 @@ section.feature-user .text ul li {
     content: counters(step,'');
 }
 
+.step.one:before {
+    content: '1';
+}
+
+.step.two:before {
+    content: '2';
+}
+
+.step.three:before {
+    content: '3';
+}
+
 section.feature-user .text ul li p {
     margin: 0 0 0 60px;
 }
