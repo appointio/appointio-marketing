@@ -1,2 +1,4 @@
 app/assets/bower_components
 node_modules
+app/assets/js/templates.js
+dist
