@@ -1,3 +1,27 @@
+var app = angular.module('appointio-marketing', ['ngRoute']);
+app.config(function($routeProvider) {
+    $routeProvider.
+        when('/index', {
+            templateUrl: 'default'
+        }).
+        when('/kontakt', {
+            templateUrl: 'contact'
+        }).
+        when('/preise', {
+            templateUrl: 'price'
+        }).
+        when('/tos', {
+            templateUrl: 'tos'
+        }).
+        when('/team', {
+            templateUrl: 'team'
+        }).
+        when('/privacy', {
+            templateUrl: 'privacy'
+        }).
+        otherwise('/index');
+});
+
 // Responsive Navigation
 (function() {
     var triggerBttn = document.getElementById('trigger-overlay'),
@@ -39,27 +63,3 @@
     triggerBttn.addEventListener('click', toggleOverlay);
     closeBttn.addEventListener('click', toggleOverlay);
 })();
-
-var app = angular.module('appointio-marketing', ['ngRoute']);
-app.config(function($routeProvider) {
-    $routeProvider.
-        when('/index', {
-            templateUrl: 'default'
-        }).
-        when('/contact', {
-            templateUrl: 'contact'
-        }).
-        when('/price', {
-            templateUrl: 'price'
-        }).
-        when('/tos', {
-            templateUrl: 'tos'
-        }).
-        when('/team', {
-            templateUrl: 'team'
-        }).
-        when('/privacy', {
-            templateUrl: 'privacy'
-        }).
-        otherwise('/index');
-});
