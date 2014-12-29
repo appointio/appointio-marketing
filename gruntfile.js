@@ -71,8 +71,45 @@ module.exports = function(grunt) {
             }
         },
 
+        aws: grunt.file.readJSON('aws-keys.json'), // Read the file
+        aws_s3: {
+            options: {
+                accessKeyId: '<%= aws.AWSAccessKeyId %>', // Use the variables
+                secretAccessKey: '<%= aws.AWSSecretKey %>', // You can also use env variables
+                region: 'eu-west-1',
+                uploadConcurrency: 5, // 5 simultaneous uploads
+                downloadConcurrency: 5, // 5 simultaneous downloads,
+                mime: {
+                    '**/*.js': 'application/javascript',
+                    '**/*.html': 'text/html',
+                    '**/*.css': 'text/css',
+                    '**/*.png': 'image/png',
+                    '**/*.jp(e?)g': 'image/jpeg'
+                }
+            },
+            clear_prod: {
+                options: {
+                    bucket: 'www.appoint.io'
+                },
+                dest: '/',
+                action: 'delete'
+            },
+            prod: {
+                options: {
+                    bucket: 'www.appoint.io'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= app.dist %>/',
+                    src: ['**'],
+                    dest: '.'
+                }]
+            }
+        },
+
     });
 
     grunt.registerTask('compile', ['clean', 'copy', 'ngtemplates']);
     grunt.registerTask('default', ['compile', 'express', 'watch']);
 };
+
