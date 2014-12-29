@@ -39,10 +39,29 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= app.app %>',
                     src: [
-                        'assets/**/*',
-                        'index.html'
+                        'assets/img/**/*',
+                        'index.html',
+
                     ],
                     dest: '<%= app.dist %>/'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= app.app %>/assets/bower_components/jquery/dist',
+                    src: [
+                        'jquery.min.map',
+
+                    ],
+                    dest: '<%= app.dist %>/assets/js'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= app.app %>/assets/bower_components/components-font-awesome/fonts',
+                    src: [
+                        '**/*',
+
+                    ],
+                    dest: '<%= app.dist %>/assets/fonts'
                 }]
             }
         },
@@ -52,7 +71,7 @@ module.exports = function(grunt) {
         ngtemplates: {
             templates: {
                 src: ['<%= app.app %>/pages/**/*.html'],
-                dest: '<%= app.dist %>/assets/js/templates.js',
+                dest: '<%= app.app %>/assets/js/templates.js',
                 options: {
                     bootstrap: function(module, script) {
                         return "(function(angular) {\n\n" +
@@ -68,6 +87,28 @@ module.exports = function(grunt) {
 
                     }
                 }
+            }
+        },
+        concat: {
+            prodCss: {
+                src: [
+                    '<%= app.app %>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css',
+                    '<%= app.app %>/assets/bower_components/components-font-awesome/css/font-awesome.min.css',
+                    '<%= app.app %>/assets/css/style.css',
+                ],
+                dest: '<%= app.dist %>/assets/css/full.min.css'
+            },
+            prodJs: {
+                src: [
+                    '<%= app.app %>/assets/bower_components/angular/angular.min.js',
+                    '<%= app.app %>/assets/bower_components/angular-route/angular-route.min.js',
+                    '<%= app.app %>/assets/bower_components/jquery/dist/jquery.min.js',
+                    '<%= app.app %>/assets/bower_components/modernizer/modernizr.js',
+                    '<%= app.app %>/assets/bower_components/classie/classie.js',
+                    '<%= app.app %>/assets/js/script.js',
+                    '<%= app.app %>/assets/js/templates.js',
+                ],
+                dest: '<%= app.dist %>/assets/js/full.min.js'
             }
         },
 
@@ -109,7 +150,7 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('compile', ['clean', 'copy', 'ngtemplates']);
+    grunt.registerTask('compile', ['clean', 'copy', 'concat', 'ngtemplates']);
     grunt.registerTask('default', ['compile', 'express', 'watch']);
 };
 
