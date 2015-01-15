@@ -113,7 +113,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('compile', ['clean', 'copy', 'concat', 'ngtemplates']);
+    grunt.registerTask('compile', ['clean', 'copy', 'ngtemplates', 'concat']);
     grunt.registerTask('default', ['compile', 'express', 'watch']);
 };
 
