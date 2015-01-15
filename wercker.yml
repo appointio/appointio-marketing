@@ -1,7 +1,7 @@
 box: wercker/nodejs
 # Build definition
 steps:
-    - seigyo/cloudflare-purge@0.0.2
+    - dominikkukacka/cloudflare-purge@0.0.3
 build:
   # The steps that will be executed on build
     steps:
@@ -22,7 +22,7 @@ deploy:
             key_secret: $AWS_SECRET_ACCESS_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: dist/
-        - seigyo/cloudflare-purge:
+        - dominikkukacka/cloudflare-purge:
             api: $CF_API_KEY
             email: $CF_EMAIL
             domain: $CF_DOMAIN
