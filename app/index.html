@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="author" content="Markus Danek, Clemens Ehrenreich, Dominik Kukacka">
+    <meta name="description" content="appoint.io - Der einfache Weg, Ihre Termine online zu verwalten">
+    <meta name="keywords" content="appoint, appoint.io, appointio, online, termine, verwalten, buchen, einfach, flexibel, buchungen, termin, organisieren">
     <meta name="author" content="Markus Danek">
     <title>appoint.io - Der einfache Weg, Ihre Termine online zu verwalten</title>
 
@@ -16,49 +17,44 @@
 </head>
 <body data-ng-app="appointio-marketing">
     <header>
-        <div class="container">
-            <h1 class="logo">logo</h1>
-            <h2>appoint.io</h2>
-            <nav>
-                <ul class="desktop">
-                    <li><a href="/#/">Startseite</a></li>
-                    <li><a href="/#/preise">Preise</a></li>
-                    <li><a href="/#/team">&Uuml;ber uns</a></li>
-                    <li><a href="http://appointio.tumblr.com" target="_blank">Blog</a></li>
-                    <li><a href="/#/kontakt">Kontakt</a></li>
-                    <!-- <button class="ghost white pull-right">Demo beantragen</button> -->
-                </ul><!-- END ul.desktop -->
-            </nav><!-- END nav -->
-            <a id="trigger-overlay" class="pull-right visible-xs"><i style="color: #FFF" class="fa fa-bars fa-2x"></i></a>
-            <div class="overlay overlay-appoint visible-xs">
-                <button type="button" class="overlay-close">Close</button>
-                <nav>
-                    <ul>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1 class="logo">logo</h1><h2>appoint.io</h2>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
                         <li><a href="/#/">Startseite</a></li>
                         <li><a href="/#/preise">Preise</a></li>
                         <li><a href="/#/team">&Uuml;ber uns</a></li>
                         <li><a href="http://appointio.tumblr.com" target="_blank">Blog</a></li>
                         <li><a href="/#/kontakt">Kontakt</a></li>
-                    </ul><!-- END ul -->
-                </nav><!-- END nav -->
-            </div><!--END overlay overlay-appoint visible-xs -->
-        </div><!-- END .container -->
+                        <li class="login"><button class="ghost white pull-right"><a href="http://app.appoint.io/">Login</a></button></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
     </header><!-- END header -->
 
     <div data-ng-view=""></div>
 
     <footer>
         <div class="container">
-            <div class="logo col-xs-12 col-md-2">
-                <img src="assets/img/appointio-logo.png" alt="appoint.io Logo" />
-            </div><!-- END .logo .col-xs-2 -->
-            <div class="links col-xs-12 col-md-8">
+            <div class="links col-xs-12 col-md-8 col-sm-offset-2">
                 <ul>
                     <li><a href="/#/index">Startseite</a></li>
                     <li><a href="/#/preise">Preise</a></li>
                     <li><a href="/#/team">&Uuml;ber Uns</a></li>
                     <li><a href="http://appointio.tumblr.com" target="_blank">Blog</a></li>
                     <li><a href="/#/kontakt">Kontakt</a></li>
+                    <li><a href="/#/privacy">Datenschutz</a></li>
+                    <li><a href="/#/tos">Nutzungsbedingungen</a></li>
                 </ul><!-- END ul -->
                 <p class="rights">Mit <i class="fa fa-heart-o"></i> in Wien entwickelt</p>
             </div><!-- END .links .col-xs-8 -->

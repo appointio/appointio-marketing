@@ -1,7 +1,7 @@
 /*
     ================================================
     Handcrafted by Markus Danek <markus@creativebrains.net>
-    Last updated on 14.12.2014
+    Last updated on 18.01.2015
     appoint.io Marketing Page Stylesheet
     ================================================
     Contents:
@@ -30,12 +30,12 @@ body {
 
 body {
     background: #f7f5f3;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 button.ghost {
     background: transparent;
-    padding: 8px 10px;
+    padding: 8px 8px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -76,170 +76,94 @@ header h2  {
 
     /* 02a - Navigation */
 
-header nav {
+header nav,
+.navbar-default {
+    height: 85px !important;
+    background: #232932;
+    border: none;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    border: none;
+    background: none;
+    color: #FFF;
+    padding-top: 25px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
 
 }
 
-header nav ul.desktop {
+header .navbar-header button {
+    color: #FFF;
+}
+
+header ul.navbar-nav {
+    padding-top: 20px;
     float: right;
-    margin-top: -30px;
 }
 
-header nav ul.desktop li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-header nav ul.desktop li.active {
-    border-bottom: 1px solid #fdfdfd;
-}
-
-header nav ul.desktop li a {
-    color: #FFFFFF;
+header #navbar > ul > li > a {
+    color: #FFF;
     text-transform: uppercase;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
     border-bottom: 1px solid transparent;
     text-decoration: none;
-    padding: 0 0 6px;
     font-family: "proxima-nova", "museo-sans", "sans-serif";
     font-weight: 300;
+    background: none;
 }
 
-header nav ul.desktop li a:hover {
+.container>.navbar-header, 
+.container-fluid>.navbar-header, 
+.container>.navbar-collapse, 
+.container-fluid>.navbar-collapse {
+    background: #232932;
+}
+
+header #navbar > ul > li > a:hover {
+    background: none;
     border-bottom: 1px solid #fdfdfd;
 }
 
-@media (max-width: 768px) { 
-    header nav ul.desktop {
-        display: none;
-    }
-
-    #trigger-overlay {
-        margin-right: 20px;
-        margin-top: -40px;
-    }
+header #navbar > ul > li.login {
+    padding-top: 7px;
 }
 
-    /* 02b - Responsive Navigation Overlay */
-
-.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(35,41,50,1);
-}
-
-.overlay .overlay-close {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
+header #navbar > ul > li.login > button > a,
+header #navbar > ul > li.login > button > a:hover {
+    color: #FFF;
     border: none;
-    background: url(../img/cross.png) no-repeat center center;
-    text-indent: 200%;
-    color: transparent;
-    outline: none;
-    z-index: 100;
-}
-
-.overlay nav {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    height: 60%;
-    font-size: 35px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    height: 100%;
-    position: relative;
-}
-
-.overlay ul li {
-    display: block;
-    height: 20%;
-    height: calc(100% / 5);
-    min-height: 54px;
-}
-
-.overlay ul li a {
-    font-weight: 300;
-    display: block;
-    color: #fff;
     text-decoration: none;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    transition: 0.3s;
-    border-bottom: 1px solid transparent;
-    text-d3ecoration: none;
-    padding: 0 0 6px;
-    font-family: "proxima-nova", "sans-serif";
+    font-weight: 500;
 }
 
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-    color: #fdfdfd;
-    border-bottom: 1px solid #fdfdfd;
-}
-
-.overlay-appoint {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-appoint.open {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-}
-
-.overlay-appoint nav {
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-}
-
-.overlay-appoint nav ul {
-    opacity: 0.4;
-    -webkit-transform: translateY(-25%) rotateX(35deg);
-    transform: translateY(-25%) rotateX(35deg);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-.overlay-appoint.open nav ul {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-}
-
-.overlay-appoint.close nav ul {
-    -webkit-transform: translateY(25%) rotateX(-35deg);
-    transform: translateY(25%) rotateX(-35deg);
-}
-
-@media screen and (max-height: 30.5em) {
-    .overlay nav {
-        height: 70%;
-        font-size: 34px;
+@media (max-width: 768px) {
+    header ul.navbar-nav {
+        float: left;
     }
-    .overlay ul li {
-        min-height: 34px;
+
+    header #navbar > ul > li > a,
+    header #navbar > ul > li > a:hover {
+        background: none;
+        border: none;
+    }
+
+    header #navbar > ul > li > a:hover {
+        text-decoration: underline;
+    }
+
+    header #navbar > ul > li.login {
+        left: -33px;
+        padding-top: 0px;
     }
 }
 
@@ -264,7 +188,7 @@ section.hero-home .content.container h1 {
     text-align: center;
     font-size: 46px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.hero-home .content.container p {
@@ -273,7 +197,7 @@ section.hero-home .content.container p {
     margin-top: 35px;
     font-size: 24px;
     line-height: 40px;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.hero-home .content.container .subscribe {
@@ -326,9 +250,6 @@ section.hero-home .content.container .subscribe form span button  {
         font-size: 16px;
         line-height: 20px;
     }
-    section.hero-home .content.container .subscribe {
-        display: none;
-    }
 }
 
     /* 03b - Short Feature List */
@@ -336,8 +257,7 @@ section.hero-home .content.container .subscribe form span button  {
 section.home-short-features {
     padding: 50px 0;
     background: #FFF;
-    position: relative;
-    z-index: -999;
+  
 }
 
 section.home-short-features .feature {
@@ -363,8 +283,7 @@ section.home-short-features .feature p {
 section.feature-user {
     background: #F7F7F7;
     padding: 50px 0;
-    position: relative;
-    z-index: -999;
+   
 }
 
 section.feature-user .text h4 {
@@ -437,15 +356,10 @@ section.feature-user .image img {
 
 footer {
     background: #232932;
-    height: 200px;
+    min-height: 200px;
     color: #FFFFFF;
     padding-top: 50px;
-    /*z-index: -999;
-    position: relative;*/
-}
 
-footer .logo {
-    margin-top: -20px;
 }
 
 footer .links {
@@ -500,9 +414,12 @@ footer .social ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    footer .logo,
     footer .social {
         display: none;
+    }
+
+    footer .links ul li {
+        margin-bottom: 10px;
     }
 }
 
@@ -526,12 +443,11 @@ section.hero-price .content.container h1 {
     font-size: 32px;
     margin-top: 100px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.price-table {
-    position: relative;
-    z-index: -999;
+  
 }
 
 section.price-table h1 {
@@ -627,14 +543,13 @@ section.hero-team .content.container h1 {
     font-size: 32px;
     margin-top: 100px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.team-info {
     background: #FFF;
     padding-bottom: 50px;
-    z-index: -999;
-    position: relative;
+  
 }
 
 section.team-info h1 {
@@ -699,13 +614,12 @@ section.hero-contact .content.container h1 {
     font-size: 32px;
     margin-top: 100px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.contact {
     padding-bottom: 50px;
-    z-index: -999;
-    position: relative;
+    
 }
 
 section.contact h1 {
@@ -727,8 +641,7 @@ section.contact p {
 }
 
 section.contact section.tos p a {
-    z-index: 111;
-    display: none;
+  
 }
 
 .tos p span {
@@ -755,13 +668,12 @@ section.hero-tos .content.container h1 {
     font-size: 32px;
     margin-top: 100px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.tos {
     padding-bottom: 50px;
-    z-index: -999;
-    position: relative;
+   
 }
 
 section.tos h1 {
@@ -783,7 +695,7 @@ section.tos p {
 }
 
 section.tos p a {
-    z-index: 111;
+    
 }
 
     /* ----------------------------------------------------------------------------------------------------------
@@ -806,13 +718,12 @@ section.hero-privacy .content.container h1 {
     font-size: 32px;
     margin-top: 100px;
     font-weight: bold;
-    font-family: "museo-sans", "sans-serif";
+    font-family: "proxima-nova", "museo-sans", "sans-serif";
 }
 
 section.privacy {
     padding-bottom: 50px;
-    z-index: -999;
-    position: relative;
+ 
 }
 
 section.privacy h1 {

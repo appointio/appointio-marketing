@@ -104,7 +104,7 @@ module.exports = function(grunt) {
                     '<%= app.app %>/assets/bower_components/angular-route/angular-route.min.js',
                     '<%= app.app %>/assets/bower_components/jquery/dist/jquery.min.js',
                     '<%= app.app %>/assets/bower_components/modernizer/modernizr.js',
-                    '<%= app.app %>/assets/bower_components/classie/classie.js',
+                    '<%= app.app %>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
                     '<%= app.app %>/assets/js/script.js',
                     '<%= app.app %>/assets/js/templates.js',
                 ],
